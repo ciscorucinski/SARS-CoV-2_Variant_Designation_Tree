@@ -20,8 +20,7 @@ jobs:
       - name: Installing Requirements
         run: pip install -r requirements.txt
       - run: python main.py
-      - name: Auto-commit
-          uses: stefanzweifel/git-auto-commit-action@v4
-          with:
-            commit_message: Update Lineages
-            commit_options: "--no-verify"
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Lineages
+          commit_options: "--no-verify"

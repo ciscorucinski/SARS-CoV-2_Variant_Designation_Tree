@@ -45,6 +45,7 @@ class Lineage:
 
         assert lineage.designation_date != "#NAME?"
         assert lineage.designation_date != "Loading..."
+        assert lineage.designation_date != "#VALUE!"
 
         node = {
             "id": id,

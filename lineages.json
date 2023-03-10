@@ -9328,6 +9328,28 @@
                                                                     "root": "BA"
                                                                 },
                                                                 "children": []
+                                                            },
+                                                            {
+                                                                "id": "BA.5.2.1.7.4.3",
+                                                                "lineage": {
+                                                                    "pango": "BF.7.4.3",
+                                                                    "partial": "BA.5.2.1.7.4.3",
+                                                                    "unaliased": "B.1.1.529.5.2.1.7.4.3",
+                                                                    "designation_date": "2023-03-10"
+                                                                },
+                                                                "height": 6,
+                                                                "parent": {
+                                                                    "line_of_descent": [
+                                                                        "BA.5.2.1.7.4",
+                                                                        "BA.5.2.1.7",
+                                                                        "BA.5.2.1",
+                                                                        "BA.5.2",
+                                                                        "BA.5",
+                                                                        "BA"
+                                                                    ],
+                                                                    "root": "BA"
+                                                                },
+                                                                "children": []
                                                             }
                                                         ]
                                                     },

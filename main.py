@@ -40,8 +40,6 @@ class Lineage:
     @classmethod
     def add_to_tree(cls, lineage: "Lineage"):
 
-        print(f"Adding {lineage=}")
-
         id = lineage.unaliased
         parent = lineage.parent
         parents = Lineage.get_parents_list(parent)
@@ -71,7 +69,6 @@ class Lineage:
             cls.roots.append(id)
         elif parent in cls.children_tree or parent == 'BA':
             cls.children_tree[parent]["children"].append(node)
-            print(cls.children_tree[parent]["children"])
 
     @classmethod
     def get_tree(cls, *, roots=None):
@@ -136,7 +133,6 @@ def decompress(lineages):
     partial_pango = []
 
     for lineage in lineages:
-        print(lineage)
         alias, *rest = lineage.split('.', maxsplit=1)
         unaliased_pango_lineage = all_alias_keys.get(alias, alias)
         if isinstance(unaliased_pango_lineage, list):
@@ -230,8 +226,6 @@ if __name__ == "__main__":
     # lineage_notes_df.dropna(subset=['unaliased_pango_lineage'], inplace=True)
     lineage_notes_df.drop('Description', axis=1, inplace=True)
 
-    print(lineage_notes_df)
-
     recombinant_lineage_notes_df['unaliased_pango_lineage'] = recombinant_lineage_notes_df['pango_lineage'].apply(
         lambda lineage: match.group(1) if (match := re.search(regex_recombinant, lineage)) else None)
 
@@ -257,14 +251,18 @@ if __name__ == "__main__":
     lineage_notes_df = lineage_notes_df.merge(designation_dates_df, on="pango_lineage")
     lineage_notes_df = lineage_notes_df.reindex(columns=column_order_lineage_notes_dataframe)
 
-    print(lineage_notes_df)
-
     for index, (pango, partial, unaliased, date, is_omicron) in lineage_notes_df.iterrows():
+
+        print(f"Analyzing Lineage: {pango} ... ", end='')
         if not is_omicron:
+            print("(not processed)")
             continue
+
         date = date.strftime('%Y-%m-%d %H:%M:%S%z')
         lineage = Lineage(date, pango, partial, unaliased)
         Lineage.add_to_tree(lineage)
+        print(f"Added {lineage=}")
+
 
     json_object = json.dumps(Lineage.get_tree(),
                              indent=4, sort_keys=False, ensure_ascii=False, separators=(',', ': '),

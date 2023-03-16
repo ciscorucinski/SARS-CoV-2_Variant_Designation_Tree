@@ -20582,6 +20582,24 @@
                                     "root": "XBC"
                                 },
                                 "children": []
+                            },
+                            {
+                                "id": "XBC.1.6",
+                                "lineage": {
+                                    "pango": "XBC.1.6",
+                                    "partial": "XBC.1.6",
+                                    "unaliased": "XBC.1.6",
+                                    "designation_date": "2023-03-16 19:46:27+0000"
+                                },
+                                "height": 2,
+                                "parent": {
+                                    "line_of_descent": [
+                                        "XBC.1",
+                                        "XBC"
+                                    ],
+                                    "root": "XBC"
+                                },
+                                "children": []
                             }
                         ]
                     },

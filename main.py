@@ -126,21 +126,28 @@ class Lineage:
 
 
 def clean(lineages):
-    return [lineage.replace("*", "") for lineage in lineages]
+    if isinstance(lineages, str):
+        return lineages.replace("*", "")
+    else:
+        return [lineage.replace("*", "") for lineage in lineages]
 
 
 def decompress(lineages):
-    partial_pango = []
+    if '.' not in lineages:
+        return lineages
+    alias, rest = lineages.split('.', maxsplit=1)
+    unaliased_pango_lineage = alias_keys.get(alias, alias)
+    return f'{unaliased_pango_lineage}.{rest}'
 
-    for lineage in lineages:
-        alias, *rest = lineage.split('.', maxsplit=1)
-        unaliased_pango_lineage = all_alias_keys.get(alias, alias)
-        if isinstance(unaliased_pango_lineage, list):
-            partial_pango.extend(decompress(unaliased_pango_lineage))
-        else:
-            partial_pango.append(f'{unaliased_pango_lineage}.{rest}')
 
-    return partial_pango
+def contains(lineage, value):
+    if 'X' in lineage:
+        alias = lineage.split('.', maxsplit=1)[0]
+        for lineage in all_alias_keys.get(alias, alias):
+            if value in decompress(lineage):
+                return True
+        return False
+    return value in lineage
 
 
 if __name__ == "__main__":
@@ -167,11 +174,11 @@ if __name__ == "__main__":
     with urllib.request.urlopen(alias_keys_url) as response:
         alias_keys_json = json.loads(response.read().decode())
 
-    all_alias_keys = {key: value for key, value in alias_keys_json.items() if value != ""}
-    alias_keys = {key: value for key, value in alias_keys_json.items() if value != "" and isinstance(value, str)}
-    recombinant_keys = {key: value for key, value in alias_keys_json.items() if isinstance(value, list)}
+    all_alias_keys = {key: clean(value) for key, value in alias_keys_json.items() if value != ""}
+    alias_keys = {key: clean(value) for key, value in alias_keys_json.items() if value != "" and isinstance(value, str)}
+    recombinant_keys = {key: clean(value) for key, value in alias_keys_json.items() if isinstance(value, list)}
 
-    column_order_dataframe = ['alias', 'pango_lineage', 'unaliased_pango_lineage_lineage', 'omicron']
+    column_order_dataframe = ['alias', 'pango_lineage', 'unaliased_pango_lineage', 'omicron']
     column_order_lineage_notes_dataframe = ['pango_lineage', 'partial_pango_lineage', 'unaliased_pango_lineage',
                                             'designation_date', 'omicron']
 
@@ -182,21 +189,22 @@ if __name__ == "__main__":
     alias_keys_df['partial_pango_lineage'] = alias_keys_df['unaliased_pango_lineage'].apply(
         lambda lineage: lineage.replace('B.1.1.529', 'BA'))
     alias_keys_df['omicron'] = alias_keys_df['unaliased_pango_lineage'].apply(
-        lambda lineage: True if lineage.startswith('B.1.1.529') else False)
+        lambda lineage: contains(lineage, 'B.1.1.529'))
 
     alias_keys_df = alias_keys_df.reindex(
         columns=['alias', 'partial_pango_lineage', 'unaliased_pango_lineage', 'omicron'])
 
     # Recombinant Alias Keys
-    recombinant_lineages = {k: ", ".join(clean(v)) for k, v in recombinant_keys.items() if not isinstance(v, str)}
+    recombinant_lineages = {k: ", ".join(v) for k, v in recombinant_keys.items() if not isinstance(v, str)}
 
     recombinant_alias_keys_df = pd.DataFrame([(alias, lineages) for alias, lineages in recombinant_lineages.items()],
                                              columns=['alias', 'pango_lineage'])
 
     recombinant_alias_keys_df['unaliased_pango_lineage'] = recombinant_alias_keys_df['pango_lineage'].apply(
-        lambda lineage: ", ".join(decompress(lineage.split(', '))))
+        lambda lineages: ', '.join([decompress(lineage) for lineage in set(lineages.split(', '))]))
+
     recombinant_alias_keys_df['omicron'] = recombinant_alias_keys_df['unaliased_pango_lineage'].apply(
-        lambda lineage: True if 'B.1.1.529' in lineage else False)
+        lambda lineages: any([contains(lineage, 'B.1.1.529') for lineage in lineages.split(', ')]))
 
     recombinant_alias_keys_df = recombinant_alias_keys_df.reindex(columns=column_order_dataframe)
 
@@ -212,18 +220,17 @@ if __name__ == "__main__":
     recombinant_lineage_notes_df = lineage_notes_df.copy()
 
     lineage_notes_df['unaliased_pango_lineage'] = lineage_notes_df.apply(
-        lambda row: match.group(1) if (match := re.search(regex, row['Description'])) else row['pango_lineage'],
+        lambda row: match.group(1) if (match := re.search(regex, row['Description'])) else row[
+            'pango_lineage'] if contains(row['pango_lineage'], 'B.1.1.529') else decompress(row['pango_lineage']),
         axis=1
     )
 
     lineage_notes_df['omicron'] = lineage_notes_df['unaliased_pango_lineage'].apply(
-        lambda lineage: 'B.1.1.529' in (
-            lineage if lineage[0] != 'X' else ", ".join(decompress(lineage.split(', ')))) if lineage else False)
+        lambda lineage: contains(lineage, 'B.1.1.529'))
 
     lineage_notes_df['partial_pango_lineage'] = lineage_notes_df['unaliased_pango_lineage'].apply(
         lambda lineage: lineage.replace('B.1.1.529.', 'BA.') if lineage else None)
 
-    # lineage_notes_df.dropna(subset=['unaliased_pango_lineage'], inplace=True)
     lineage_notes_df.drop('Description', axis=1, inplace=True)
 
     recombinant_lineage_notes_df['unaliased_pango_lineage'] = recombinant_lineage_notes_df['pango_lineage'].apply(
@@ -231,22 +238,22 @@ if __name__ == "__main__":
 
     recombinant_lineage_notes_df.dropna(subset=['unaliased_pango_lineage'], inplace=True)
     recombinant_lineage_notes_df.drop('Description', axis=1, inplace=True)
-    recombinant_lineage_notes_df.drop(index=recombinant_lineage_notes_df.index[:3], inplace=True)
+    # recombinant_lineage_notes_df.drop(index=recombinant_lineage_notes_df.index[:3], inplace=True)
 
     recombinant_lineage_notes_df['omicron'] = recombinant_lineage_notes_df['pango_lineage'].apply(
-        lambda lineage: True)  # TODO This needs to be way more robust
+        lambda lineage: contains(lineage, 'B.1.1.529'))
 
     withdrawn_lineage_notes_df['unaliased_pango_lineage'] = withdrawn_lineage_notes_df['Description'].apply(
         lambda description: match.group(1) if (match := re.search(regex_withdrawn, description)) else None)
 
-    withdrawn_lineage_notes_df['pango_lineage'] = withdrawn_lineage_notes_df['pango_lineage'].apply(
-        lambda lineage: lineage[1:])
-
     withdrawn_lineage_notes_df.dropna(subset=['unaliased_pango_lineage'], inplace=True)
     withdrawn_lineage_notes_df.drop('Description', axis=1, inplace=True)
 
+    withdrawn_lineage_notes_df['partial_pango_lineage'] = withdrawn_lineage_notes_df['unaliased_pango_lineage'].apply(
+        lambda lineage: lineage.replace('B.1.1.529.', 'BA.') if lineage else None)
+
     withdrawn_lineage_notes_df['omicron'] = withdrawn_lineage_notes_df['unaliased_pango_lineage'].apply(
-        lambda lineage: True if ", ".join(decompress(lineage.split(', '))).startswith('B.1.1.529') else False)
+        lambda lineage: contains(lineage, 'B.1.1.529'))
 
     lineage_notes_df = lineage_notes_df.merge(designation_dates_df, on="pango_lineage")
     lineage_notes_df = lineage_notes_df.reindex(columns=column_order_lineage_notes_dataframe)
@@ -262,7 +269,6 @@ if __name__ == "__main__":
         lineage = Lineage(date, pango, partial, unaliased)
         Lineage.add_to_tree(lineage)
         print(f"Added {lineage=}")
-
 
     json_object = json.dumps(Lineage.get_tree(),
                              indent=4, sort_keys=False, ensure_ascii=False, separators=(',', ': '),

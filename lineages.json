@@ -19836,6 +19836,44 @@
                                             "root": "XBB"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.5.24",
+                                        "lineage": {
+                                            "pango": "XBB.1.5.24",
+                                            "partial": "XBB.1.5.24",
+                                            "unaliased": "XBB.1.5.24",
+                                            "designation_date": "2023-03-18 21:32:16+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.5",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.5.25",
+                                        "lineage": {
+                                            "pango": "XBB.1.5.25",
+                                            "partial": "XBB.1.5.25",
+                                            "unaliased": "XBB.1.5.25",
+                                            "designation_date": "2023-03-18 21:55:27+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.5",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },

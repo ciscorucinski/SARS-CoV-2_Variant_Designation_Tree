@@ -19922,6 +19922,68 @@
                                             "root": "XBB"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.5.26",
+                                        "lineage": {
+                                            "pango": "XBB.1.5.26",
+                                            "partial": "XBB.1.5.26",
+                                            "unaliased": "XBB.1.5.26",
+                                            "designation_date": "2023-03-19 20:11:36+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.5",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": [
+                                            {
+                                                "id": "XBB.1.5.26.1",
+                                                "lineage": {
+                                                    "pango": "EU.1",
+                                                    "partial": "XBB.1.5.26.1",
+                                                    "unaliased": "XBB.1.5.26.1",
+                                                    "designation_date": "2023-03-19 20:11:36+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.5.26",
+                                                        "XBB.1.5",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "id": "XBB.1.5.26.1.1",
+                                                        "lineage": {
+                                                            "pango": "EU.1.1",
+                                                            "partial": "XBB.1.5.26.1.1",
+                                                            "unaliased": "XBB.1.5.26.1.1",
+                                                            "designation_date": "2023-03-19 20:11:36+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.5.26.1",
+                                                                "XBB.1.5.26",
+                                                                "XBB.1.5",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },

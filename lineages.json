@@ -21191,6 +21191,21 @@
                     "root": "XBT"
                 },
                 "children": []
+            },
+            {
+                "id": "XBU",
+                "lineage": {
+                    "pango": "XBU",
+                    "partial": "XBU",
+                    "unaliased": "XBU",
+                    "designation_date": "2023-03-19 14:46:34+0000"
+                },
+                "height": 0,
+                "parent": {
+                    "line_of_descent": null,
+                    "root": "XBU"
+                },
+                "children": []
             }
         ]
     }

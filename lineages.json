@@ -20306,6 +20306,24 @@
                                         "children": []
                                     }
                                 ]
+                            },
+                            {
+                                "id": "XBB.1.20",
+                                "lineage": {
+                                    "pango": "XBB.1.20",
+                                    "partial": "XBB.1.20",
+                                    "unaliased": "XBB.1.20",
+                                    "designation_date": "2023-03-19 16:40:15+0000"
+                                },
+                                "height": 2,
+                                "parent": {
+                                    "line_of_descent": [
+                                        "XBB.1",
+                                        "XBB"
+                                    ],
+                                    "root": "XBB"
+                                },
+                                "children": []
                             }
                         ]
                     },
@@ -21242,6 +21260,21 @@
                 "parent": {
                     "line_of_descent": null,
                     "root": "XBU"
+                },
+                "children": []
+            },
+            {
+                "id": "XBV",
+                "lineage": {
+                    "pango": "XBV",
+                    "partial": "XBV",
+                    "unaliased": "XBV",
+                    "designation_date": "2023-03-19 17:28:53+0000"
+                },
+                "height": 0,
+                "parent": {
+                    "line_of_descent": null,
+                    "root": "XBV"
                 },
                 "children": []
             }

@@ -5720,6 +5720,31 @@
                                                                                             "root": "B.1.1.529"
                                                                                         },
                                                                                         "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "id": "B.1.1.529.2.75.3.4.1.1.1.1.21",
+                                                                                        "lineage": {
+                                                                                            "pango": "CH.1.1.21",
+                                                                                            "partial": "BA.2.75.3.4.1.1.1.1.21",
+                                                                                            "unaliased": "B.1.1.529.2.75.3.4.1.1.1.1.21",
+                                                                                            "designation_date": "2023-03-28 23:36:55+0000"
+                                                                                        },
+                                                                                        "height": 9,
+                                                                                        "parent": {
+                                                                                            "line_of_descent": [
+                                                                                                "B.1.1.529.2.75.3.4.1.1.1.1",
+                                                                                                "B.1.1.529.2.75.3.4.1.1.1",
+                                                                                                "B.1.1.529.2.75.3.4.1.1",
+                                                                                                "B.1.1.529.2.75.3.4.1",
+                                                                                                "B.1.1.529.2.75.3.4",
+                                                                                                "B.1.1.529.2.75.3",
+                                                                                                "B.1.1.529.2.75",
+                                                                                                "B.1.1.529.2",
+                                                                                                "B.1.1.529"
+                                                                                            ],
+                                                                                            "root": "B.1.1.529"
+                                                                                        },
+                                                                                        "children": []
                                                                                     }
                                                                                 ]
                                                                             }
@@ -23181,6 +23206,21 @@
                 "parent": {
                     "line_of_descent": null,
                     "root": "XBY"
+                },
+                "children": []
+            },
+            {
+                "id": "XBZ",
+                "lineage": {
+                    "pango": "XBZ",
+                    "partial": "XBZ",
+                    "unaliased": "XBZ",
+                    "designation_date": "2023-03-28 21:30:53+0000"
+                },
+                "height": 0,
+                "parent": {
+                    "line_of_descent": null,
+                    "root": "XBZ"
                 },
                 "children": []
             }

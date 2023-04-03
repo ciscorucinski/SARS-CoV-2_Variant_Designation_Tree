@@ -23349,6 +23349,21 @@
                     "root": "XBZ"
                 },
                 "children": []
+            },
+            {
+                "id": "XCA",
+                "lineage": {
+                    "pango": "XCA",
+                    "partial": "XCA",
+                    "unaliased": "XCA",
+                    "designation_date": "2023-04-03 16:17:31+0000"
+                },
+                "height": 0,
+                "parent": {
+                    "line_of_descent": null,
+                    "root": "XCA"
+                },
+                "children": []
             }
         ]
     }

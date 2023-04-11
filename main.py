@@ -1,10 +1,17 @@
+import pprint
 import urllib
+from pathlib import Path
+
+import requests
+from bs4 import BeautifulSoup
 
 import pandas as pd
 from typing import Union, List
 import json
 
 import re
+
+from storage import LastUpdatedStorage, LineageTreeStorage, NextCladeLineagesStorage
 
 
 class Lineage:
@@ -101,29 +108,6 @@ class Lineage:
 
         return tree
 
-    @classmethod
-    def get_progenitors(cls, lineage: str):
-        result = []
-        parents = cls.get_parents_list(lineage)
-        for progenitor in parents:
-            parent = cls.get_children().get(progenitor)
-            parent["children"] = None
-            parent["parent"] = None
-            result.append(parent)
-        return result
-
-    @classmethod
-    def get_parent_id_list(cls):
-        return cls.parent_tree
-
-    @classmethod
-    def get_children(cls):
-        return cls.children_tree
-
-    @classmethod
-    def get_roots(cls):
-        return cls.roots
-
 
 def clean(lineages):
     if isinstance(lineages, str):
@@ -150,19 +134,40 @@ def contains(lineage, value):
     return value in lineage
 
 
+def extract_pango_values(node):
+    # Create an empty list to store PANGO values
+    pango_values = []
+
+    # Check if the current node has a "Nextclade_pango" attribute
+    if "Nextclade_pango" in node["node_attrs"]:
+        # Extract the PANGO value and add it to the list
+        pango_values.append(node["node_attrs"]["Nextclade_pango"]["value"])
+
+    # Check if the current node has any children
+    if "children" in node:
+        # Recursively call the function for each child node and extend the list with the returned values
+        for child in node["children"]:
+            pango_values.extend(extract_pango_values(child))
+
+    return pango_values
+
+
 if __name__ == "__main__":
     # pd.set_option('display.max_columns', None)
     # pd.set_option('display.width', 200)
     # pd.set_option('display.max_colwidth', 200)
     # pd.set_option('display.max_rows', None)
 
+    Path("files/nextclade").mkdir(parents=True, exist_ok=True)
+    last_updated_file = LastUpdatedStorage("files/nextclade/last_updated.csv")
+    lineage_tree_file = LineageTreeStorage("files/tree.json")
+    nextClade_lineages_file = NextCladeLineagesStorage("files/nextclade/available_lineages.txt")
+
     # url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcJqvDKlzyT7uNVe4IjuksUoQ3vIIUKJpOnLzYuAxf3cl2Ssp02MedPiBnHUaPfwP24iYSj5a0DHCT/pub?gid=397158123&single=true&output=csv"
     designation_dates_url = "https://raw.githubusercontent.com/ciscorucinski/pango-designation-dates/main/data/lineage_designation_date.csv"
     alias_keys_url = "https://raw.githubusercontent.com/cov-lineages/pango-designation/master/pango_designation/alias_key.json"
     lineage_notes_url = "https://raw.githubusercontent.com/cov-lineages/pango-designation/master/lineage_notes.txt"
-
-    # set index to sort by date. Have to copy date column to still have access to the data
-    # lineages_df = pd.read_csv(url, sep=",")
+    nextclade_mn908947_versions_url = "https://github.com/nextstrain/nextclade_data/tree/master/data/datasets/sars-cov-2/references/MN908947/versions"
 
     designation_dates_df = pd.read_csv(designation_dates_url, sep=",", parse_dates=['designation_date'])
 
@@ -238,7 +243,6 @@ if __name__ == "__main__":
 
     recombinant_lineage_notes_df.dropna(subset=['unaliased_pango_lineage'], inplace=True)
     recombinant_lineage_notes_df.drop('Description', axis=1, inplace=True)
-    # recombinant_lineage_notes_df.drop(index=recombinant_lineage_notes_df.index[:3], inplace=True)
 
     recombinant_lineage_notes_df['omicron'] = recombinant_lineage_notes_df['pango_lineage'].apply(
         lambda lineage: contains(lineage, 'B.1.1.529'))
@@ -274,5 +278,64 @@ if __name__ == "__main__":
                              indent=4, sort_keys=False, ensure_ascii=False, separators=(',', ': '),
                              check_circular=False)
 
-    with open("lineages.json", "w") as outfile:
-        outfile.write(json_object)
+    lineage_tree_file.write(json_object)
+
+    print()
+    print("Retrieving NextClade Data")
+
+    last_updated, nextclade_latest_url = last_updated_file.read()
+
+    response = requests.get(nextclade_mn908947_versions_url)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    links = soup.find_all('a')
+
+    filtered_hrefs = [href for link in soup.find_all("a") if (href := link.get("href"))
+                      and "datasets/sars-cov-2/references/MN908947/versions/" in href]
+
+    latest_href = filtered_hrefs[-1]
+
+    current_latest_tree_url = f"https://raw.githubusercontent.com{latest_href}/tree.json"
+    current_latest_tree_url = current_latest_tree_url.replace("/tree/master/data/datasets/sars-cov-2/",
+                                                              "/master/data/datasets/sars-cov-2/")
+
+    print(f"Latest URL: {current_latest_tree_url}")
+    print()
+
+    omicron_pango_values = set()
+
+    if nextclade_latest_url == current_latest_tree_url:
+        print("No new data is available")
+        print(f"Url was already parsed: {last_updated}")
+        print()
+        print("Retrieving Omicron Lineages ... ", end="")
+
+        omicron_lineages = nextClade_lineages_file.read()
+
+        print("Done")
+
+    else:
+
+        last_updated_file.write(current_latest_tree_url)
+
+        print("New data available")
+        print("Loading new tree ... ", end="")
+        with urllib.request.urlopen(current_latest_tree_url) as response:
+            nextstrain_tree = json.loads(response.read().decode())
+
+        print("Done")
+        tree = nextstrain_tree["tree"]
+
+        print("Extracting Omicron Lineages ... ", end="")
+        all_pango_values = extract_pango_values(tree)
+        omicron_lineages = {lineage for lineage in all_pango_values if contains(decompress(lineage), "B.1.1.529")}
+        omicron_lineages = sorted(omicron_lineages)
+
+        nextClade_lineages_file.write(omicron_lineages)
+
+        print("Done")
+
+    print()
+
+    # Print the list of PANGO values
+    pprint.pprint(omicron_lineages)

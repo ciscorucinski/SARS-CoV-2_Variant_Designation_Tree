@@ -22545,6 +22545,24 @@
                                     "root": "XBB"
                                 },
                                 "children": []
+                            },
+                            {
+                                "id": "XBB.1.33",
+                                "lineage": {
+                                    "pango": "XBB.1.33",
+                                    "partial": "XBB.1.33",
+                                    "unaliased": "XBB.1.33",
+                                    "designation_date": "2023-04-18 13:39:54+0000"
+                                },
+                                "height": 2,
+                                "parent": {
+                                    "line_of_descent": [
+                                        "XBB.1",
+                                        "XBB"
+                                    ],
+                                    "root": "XBB"
+                                },
+                                "children": []
                             }
                         ]
                     },

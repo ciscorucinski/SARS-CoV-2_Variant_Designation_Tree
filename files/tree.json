@@ -22729,6 +22729,44 @@
                                             "root": "XBB"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "id": "XBB.2.3.6",
+                                        "lineage": {
+                                            "pango": "XBB.2.3.6",
+                                            "partial": "XBB.2.3.6",
+                                            "unaliased": "XBB.2.3.6",
+                                            "designation_date": "2023-04-19 14:52:03+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.2.3",
+                                                "XBB.2",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "XBB.2.3.7",
+                                        "lineage": {
+                                            "pango": "XBB.2.3.7",
+                                            "partial": "XBB.2.3.7",
+                                            "unaliased": "XBB.2.3.7",
+                                            "designation_date": "2023-04-19 14:59:23+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.2.3",
+                                                "XBB.2",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },

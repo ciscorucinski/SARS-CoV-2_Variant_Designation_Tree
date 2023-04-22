@@ -21792,6 +21792,44 @@
                                             "root": "XBB"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.5.41",
+                                        "lineage": {
+                                            "pango": "XBB.1.5.41",
+                                            "partial": "XBB.1.5.41",
+                                            "unaliased": "XBB.1.5.41",
+                                            "designation_date": "2023-04-22 21:09:51+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.5",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.5.42",
+                                        "lineage": {
+                                            "pango": "XBB.1.5.42",
+                                            "partial": "XBB.1.5.42",
+                                            "unaliased": "XBB.1.5.42",
+                                            "designation_date": "2023-04-22 21:31:31+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.5",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },
@@ -22423,6 +22461,85 @@
                                             "partial": "XBB.1.16.1",
                                             "unaliased": "XBB.1.16.1",
                                             "designation_date": "2023-03-21 23:06:10+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.16",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": [
+                                            {
+                                                "id": "XBB.1.16.1.1",
+                                                "lineage": {
+                                                    "pango": "FU.1",
+                                                    "partial": "XBB.1.16.1.1",
+                                                    "unaliased": "XBB.1.16.1.1",
+                                                    "designation_date": "2023-04-22 20:47:06+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.16.1",
+                                                        "XBB.1.16",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "XBB.1.16.1.2",
+                                                "lineage": {
+                                                    "pango": "FU.2",
+                                                    "partial": "XBB.1.16.1.2",
+                                                    "unaliased": "XBB.1.16.1.2",
+                                                    "designation_date": "2023-04-22 20:49:39+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.16.1",
+                                                        "XBB.1.16",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "XBB.1.16.2",
+                                        "lineage": {
+                                            "pango": "XBB.1.16.2",
+                                            "partial": "XBB.1.16.2",
+                                            "unaliased": "XBB.1.16.2",
+                                            "designation_date": "2023-04-22 20:39:41+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.16",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.16.3",
+                                        "lineage": {
+                                            "pango": "XBB.1.16.3",
+                                            "partial": "XBB.1.16.3",
+                                            "unaliased": "XBB.1.16.3",
+                                            "designation_date": "2023-04-22 20:42:38+0000"
                                         },
                                         "height": 3,
                                         "parent": {

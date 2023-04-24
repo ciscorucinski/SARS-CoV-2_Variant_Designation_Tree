@@ -23703,6 +23703,42 @@
                             ],
                             "root": "XBB"
                         },
+                        "children": [
+                            {
+                                "id": "XBB.8.1",
+                                "lineage": {
+                                    "pango": "XBB.8.1",
+                                    "partial": "XBB.8.1",
+                                    "unaliased": "XBB.8.1",
+                                    "designation_date": "2023-04-24 20:48:28+0000"
+                                },
+                                "height": 2,
+                                "parent": {
+                                    "line_of_descent": [
+                                        "XBB.8",
+                                        "XBB"
+                                    ],
+                                    "root": "XBB"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "XBB.9",
+                        "lineage": {
+                            "pango": "XBB.9",
+                            "partial": "XBB.9",
+                            "unaliased": "XBB.9",
+                            "designation_date": "2023-04-24 21:03:59+0000"
+                        },
+                        "height": 1,
+                        "parent": {
+                            "line_of_descent": [
+                                "XBB"
+                            ],
+                            "root": "XBB"
+                        },
                         "children": []
                     }
                 ]

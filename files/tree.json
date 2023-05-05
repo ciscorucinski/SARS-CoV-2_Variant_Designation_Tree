@@ -22036,7 +22036,70 @@
                                             ],
                                             "root": "XBB"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "id": "XBB.1.5.47.1",
+                                                "lineage": {
+                                                    "pango": "FZ.1",
+                                                    "partial": "XBB.1.5.47.1",
+                                                    "unaliased": "XBB.1.5.47.1",
+                                                    "designation_date": "2023-05-05 07:25:15+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.5.47",
+                                                        "XBB.1.5",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "id": "XBB.1.5.47.1.1",
+                                                        "lineage": {
+                                                            "pango": "FZ.1.1",
+                                                            "partial": "XBB.1.5.47.1.1",
+                                                            "unaliased": "XBB.1.5.47.1.1",
+                                                            "designation_date": "2023-05-05 07:28:15+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.5.47.1",
+                                                                "XBB.1.5.47",
+                                                                "XBB.1.5",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": "XBB.1.5.47.2",
+                                                "lineage": {
+                                                    "pango": "FZ.2",
+                                                    "partial": "XBB.1.5.47.2",
+                                                    "unaliased": "XBB.1.5.47.2",
+                                                    "designation_date": "2023-05-05 07:29:10+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.5.47",
+                                                        "XBB.1.5",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "id": "XBB.1.5.48",

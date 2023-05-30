@@ -24123,6 +24123,48 @@
                                                         "children": []
                                                     }
                                                 ]
+                                            },
+                                            {
+                                                "id": "XBB.1.9.2.6",
+                                                "lineage": {
+                                                    "pango": "EG.6",
+                                                    "partial": "XBB.1.9.2.6",
+                                                    "unaliased": "XBB.1.9.2.6",
+                                                    "designation_date": "2023-05-30 08:17:47+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.9.2",
+                                                        "XBB.1.9",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "id": "XBB.1.9.2.6.1",
+                                                        "lineage": {
+                                                            "pango": "EG.6.1",
+                                                            "partial": "XBB.1.9.2.6.1",
+                                                            "unaliased": "XBB.1.9.2.6.1",
+                                                            "designation_date": "2023-05-30 08:20:28+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.9.2.6",
+                                                                "XBB.1.9.2",
+                                                                "XBB.1.9",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     },

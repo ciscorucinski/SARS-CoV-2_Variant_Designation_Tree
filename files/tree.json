@@ -25854,6 +25854,44 @@
                                     "root": "XBB"
                                 },
                                 "children": []
+                            },
+                            {
+                                "id": "XBB.1.43",
+                                "lineage": {
+                                    "pango": "XBB.1.43",
+                                    "partial": "XBB.1.43",
+                                    "unaliased": "XBB.1.43",
+                                    "designation_date": "2023-05-31 13:22:43+0000"
+                                },
+                                "height": 2,
+                                "parent": {
+                                    "line_of_descent": [
+                                        "XBB.1",
+                                        "XBB"
+                                    ],
+                                    "root": "XBB"
+                                },
+                                "children": [
+                                    {
+                                        "id": "XBB.1.43.1",
+                                        "lineage": {
+                                            "pango": "XBB.1.43.1",
+                                            "partial": "XBB.1.43.1",
+                                            "unaliased": "XBB.1.43.1",
+                                            "designation_date": "2023-05-31 13:25:08+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.43",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     },

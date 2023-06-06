@@ -23279,7 +23279,28 @@
                                             ],
                                             "root": "XBB"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "id": "XBB.1.5.70.1",
+                                                "lineage": {
+                                                    "pango": "GK.1",
+                                                    "partial": "XBB.1.5.70.1",
+                                                    "unaliased": "XBB.1.5.70.1",
+                                                    "designation_date": "2023-06-06 15:18:23+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.5.70",
+                                                        "XBB.1.5",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "id": "XBB.1.5.71",
@@ -23683,6 +23704,50 @@
                                                             "root": "XBB"
                                                         },
                                                         "children": []
+                                                    },
+                                                    {
+                                                        "id": "XBB.1.9.1.1.5",
+                                                        "lineage": {
+                                                            "pango": "FL.1.5",
+                                                            "partial": "XBB.1.9.1.1.5",
+                                                            "unaliased": "XBB.1.9.1.1.5",
+                                                            "designation_date": "2023-06-06 15:09:00+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.9.1.1",
+                                                                "XBB.1.9.1",
+                                                                "XBB.1.9",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "id": "XBB.1.9.1.1.5.1",
+                                                                "lineage": {
+                                                                    "pango": "FL.1.5.1",
+                                                                    "partial": "XBB.1.9.1.1.5.1",
+                                                                    "unaliased": "XBB.1.9.1.1.5.1",
+                                                                    "designation_date": "2023-06-06 15:10:38+0000"
+                                                                },
+                                                                "height": 6,
+                                                                "parent": {
+                                                                    "line_of_descent": [
+                                                                        "XBB.1.9.1.1.5",
+                                                                        "XBB.1.9.1.1",
+                                                                        "XBB.1.9.1",
+                                                                        "XBB.1.9",
+                                                                        "XBB.1",
+                                                                        "XBB"
+                                                                    ],
+                                                                    "root": "XBB"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             },
@@ -25882,7 +25947,46 @@
                                     ],
                                     "root": "XBB"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "XBB.1.34.1",
+                                        "lineage": {
+                                            "pango": "XBB.1.34.1",
+                                            "partial": "XBB.1.34.1",
+                                            "unaliased": "XBB.1.34.1",
+                                            "designation_date": "2023-06-06 15:28:03+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.34",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.34.2",
+                                        "lineage": {
+                                            "pango": "XBB.1.34.2",
+                                            "partial": "XBB.1.34.2",
+                                            "unaliased": "XBB.1.34.2",
+                                            "designation_date": "2023-06-06 15:30:06+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.34",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "id": "XBB.1.35",

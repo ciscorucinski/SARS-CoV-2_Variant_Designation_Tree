@@ -26603,26 +26603,28 @@
                                             ],
                                             "root": "XBB"
                                         },
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "XBB.2.6.1",
-                                        "lineage": {
-                                            "pango": "GH.1",
-                                            "partial": "XBB.2.6.1",
-                                            "unaliased": "XBB.2.6.1",
-                                            "designation_date": "2023-06-01 15:58:06+0000"
-                                        },
-                                        "height": 3,
-                                        "parent": {
-                                            "line_of_descent": [
-                                                "XBB.2.6",
-                                                "XBB.2",
-                                                "XBB"
-                                            ],
-                                            "root": "XBB"
-                                        },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "id": "XBB.2.6.1.1",
+                                                "lineage": {
+                                                    "pango": "GH.1",
+                                                    "partial": "XBB.2.6.1.1",
+                                                    "unaliased": "XBB.2.6.1.1",
+                                                    "designation_date": "2023-06-01 15:58:06+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.2.6.1",
+                                                        "XBB.2.6",
+                                                        "XBB.2",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "id": "XBB.2.6.2",

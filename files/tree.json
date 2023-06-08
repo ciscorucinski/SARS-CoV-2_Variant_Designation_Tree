@@ -28034,6 +28034,21 @@
                     "root": "XCC"
                 },
                 "children": []
+            },
+            {
+                "id": "XCD",
+                "lineage": {
+                    "pango": "XCD",
+                    "partial": "XCD",
+                    "unaliased": "XCD",
+                    "designation_date": "2023-06-08 11:06:28+0000"
+                },
+                "height": 0,
+                "parent": {
+                    "line_of_descent": null,
+                    "root": "XCD"
+                },
+                "children": []
             }
         ]
     }

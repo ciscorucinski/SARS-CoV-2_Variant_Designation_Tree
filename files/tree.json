@@ -24216,6 +24216,25 @@
                                             "root": "XBB"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "id": "XBB.1.5.87",
+                                        "lineage": {
+                                            "pango": "XBB.1.5.87",
+                                            "partial": "XBB.1.5.87",
+                                            "unaliased": "XBB.1.5.87",
+                                            "designation_date": "2023-06-13 10:27:32+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "XBB.1.5",
+                                                "XBB.1",
+                                                "XBB"
+                                            ],
+                                            "root": "XBB"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },
@@ -24454,6 +24473,27 @@
                                                                 "children": []
                                                             }
                                                         ]
+                                                    },
+                                                    {
+                                                        "id": "XBB.1.9.1.1.5",
+                                                        "lineage": {
+                                                            "pango": "FL.1.6",
+                                                            "partial": "XBB.1.9.1.1.5",
+                                                            "unaliased": "XBB.1.9.1.1.5",
+                                                            "designation_date": "2023-06-13 10:29:44+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.9.1.1",
+                                                                "XBB.1.9.1",
+                                                                "XBB.1.9",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
                                                     }
                                                 ]
                                             },

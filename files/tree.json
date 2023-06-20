@@ -24475,11 +24475,11 @@
                                                         ]
                                                     },
                                                     {
-                                                        "id": "XBB.1.9.1.1.5",
+                                                        "id": "XBB.1.9.1.1.6",
                                                         "lineage": {
                                                             "pango": "FL.1.6",
-                                                            "partial": "XBB.1.9.1.1.5",
-                                                            "unaliased": "XBB.1.9.1.1.5",
+                                                            "partial": "XBB.1.9.1.1.6",
+                                                            "unaliased": "XBB.1.9.1.1.6",
                                                             "designation_date": "2023-06-13 10:29:44+0000"
                                                         },
                                                         "height": 5,

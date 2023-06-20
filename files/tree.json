@@ -25405,7 +25405,30 @@
                                                             ],
                                                             "root": "XBB"
                                                         },
-                                                        "children": []
+                                                        "children": [
+                                                            {
+                                                                "id": "XBB.1.9.2.5.1.1",
+                                                                "lineage": {
+                                                                    "pango": "EG.5.1.1",
+                                                                    "partial": "XBB.1.9.2.5.1.1",
+                                                                    "unaliased": "XBB.1.9.2.5.1.1",
+                                                                    "designation_date": "2023-06-20 15:46:33+0000"
+                                                                },
+                                                                "height": 6,
+                                                                "parent": {
+                                                                    "line_of_descent": [
+                                                                        "XBB.1.9.2.5.1",
+                                                                        "XBB.1.9.2.5",
+                                                                        "XBB.1.9.2",
+                                                                        "XBB.1.9",
+                                                                        "XBB.1",
+                                                                        "XBB"
+                                                                    ],
+                                                                    "root": "XBB"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
                                                     },
                                                     {
                                                         "id": "XBB.1.9.2.5.2",

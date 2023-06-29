@@ -25442,12 +25442,32 @@
                                                 ]
                                             },
                                             {
-                                                "id": "XBB.1.9.1.18",
+                                                "id": "XBB.1.9.1.19",
                                                 "lineage": {
                                                     "pango": "FL.19",
-                                                    "partial": "XBB.1.9.1.18",
-                                                    "unaliased": "XBB.1.9.1.18",
+                                                    "partial": "XBB.1.9.1.19",
+                                                    "unaliased": "XBB.1.9.1.19",
                                                     "designation_date": "2023-06-28 19:53:40+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.9.1",
+                                                        "XBB.1.9",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "XBB.1.9.1.20",
+                                                "lineage": {
+                                                    "pango": "FL.20",
+                                                    "partial": "XBB.1.9.1.20",
+                                                    "unaliased": "XBB.1.9.1.20",
+                                                    "designation_date": "2023-06-29 21:29:20+0000"
                                                 },
                                                 "height": 4,
                                                 "parent": {

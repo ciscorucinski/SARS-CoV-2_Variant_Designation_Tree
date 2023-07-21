@@ -3,7 +3,6 @@ import urllib
 from pathlib import Path
 
 import requests
-from bs4 import BeautifulSoup
 
 import pandas as pd
 from typing import Union, List
@@ -169,7 +168,7 @@ if __name__ == "__main__":
     lineage_notes_url = "https://raw.githubusercontent.com/cov-lineages/pango-designation/master/lineage_notes.txt"
     nextclade_mn908947_versions_url = "https://github.com/nextstrain/nextclade_data/tree/master/data/datasets/sars-cov-2/references/MN908947/versions"
 
-    designation_dates_df = pd.read_csv(designation_dates_url, sep=",", parse_dates=['designation_date'])
+    designation_dates_df = pd.read_csv(designation_dates_url, sep=",", parse_dates=['designation_date'], date_format='mixed')
 
     designation_dates_df.dropna(axis='rows', how='any', subset=['designation_date'], inplace=True)
     designation_dates_df['designation_date'] = pd.to_datetime(designation_dates_df['designation_date'], errors='coerce',
@@ -286,18 +285,14 @@ if __name__ == "__main__":
     last_updated, nextclade_latest_url = last_updated_file.read()
 
     response = requests.get(nextclade_mn908947_versions_url)
-    soup = BeautifulSoup(response.content, "html.parser")
 
-    links = soup.find_all('a')
+    payload = json.loads(response.content)['payload']
+    repo = payload['repo']
+    path = payload['tree']['items'][-1]['path']
+    repository = f"{repo['ownerLogin']}/{repo['name']}"
+    branch = repo['defaultBranch']
 
-    filtered_hrefs = [href for link in soup.find_all("a") if (href := link.get("href"))
-                      and "datasets/sars-cov-2/references/MN908947/versions/" in href]
-
-    latest_href = filtered_hrefs[-1]
-
-    current_latest_tree_url = f"https://raw.githubusercontent.com{latest_href}/tree.json"
-    current_latest_tree_url = current_latest_tree_url.replace("/tree/master/data/datasets/sars-cov-2/",
-                                                              "/master/data/datasets/sars-cov-2/")
+    current_latest_tree_url = f"https://raw.githubusercontent.com/{repository}/{branch}/{path}/tree.json"
 
     print(f"Latest URL: {current_latest_tree_url}")
     print()

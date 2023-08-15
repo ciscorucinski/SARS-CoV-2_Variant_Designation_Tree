@@ -212,7 +212,7 @@ if __name__ == "__main__":
 
     recombinant_alias_keys_df = recombinant_alias_keys_df.reindex(columns=column_order_dataframe)
 
-    lineage_notes_df = pd.read_csv(lineage_notes_url, delimiter='\t')
+    lineage_notes_df = pd.read_csv(lineage_notes_url, delimiter='\t', on_bad_lines='warn')
 
     regex = r"^Alias of\s([^\s|,]*)"
     regex_withdrawn = r"^Withdrawn:[\w\s.-]+Alias of\s([^\s|,]*)"

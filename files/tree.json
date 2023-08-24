@@ -24047,6 +24047,26 @@
                                                     "root": "XBB"
                                                 },
                                                 "children": []
+                                            },
+                                            {
+                                                "id": "XBB.1.5.44.2",
+                                                "lineage": {
+                                                    "pango": "HC.2",
+                                                    "partial": "XBB.1.5.44.2",
+                                                    "unaliased": "XBB.1.5.44.2",
+                                                    "designation_date": "2023-08-24 22:16:54+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.5.44",
+                                                        "XBB.1.5",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": []
                                             }
                                         ]
                                     },
@@ -28413,6 +28433,28 @@
                                                                         "children": []
                                                                     }
                                                                 ]
+                                                            },
+                                                            {
+                                                                "id": "XBB.1.9.2.5.1.7",
+                                                                "lineage": {
+                                                                    "pango": "EG.5.1.7",
+                                                                    "partial": "XBB.1.9.2.5.1.7",
+                                                                    "unaliased": "XBB.1.9.2.5.1.7",
+                                                                    "designation_date": "2023-08-24 22:19:46+0000"
+                                                                },
+                                                                "height": 6,
+                                                                "parent": {
+                                                                    "line_of_descent": [
+                                                                        "XBB.1.9.2.5.1",
+                                                                        "XBB.1.9.2.5",
+                                                                        "XBB.1.9.2",
+                                                                        "XBB.1.9",
+                                                                        "XBB.1",
+                                                                        "XBB"
+                                                                    ],
+                                                                    "root": "XBB"
+                                                                },
+                                                                "children": []
                                                             }
                                                         ]
                                                     },

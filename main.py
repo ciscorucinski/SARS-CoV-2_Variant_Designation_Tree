@@ -282,24 +282,25 @@ if __name__ == "__main__":
     print()
     print("Retrieving NextClade Data")
 
-    last_updated, nextclade_latest_url = last_updated_file.read()
+    last_updated, last_retrieved_commit = last_updated_file.read()
 
-    response = requests.get(nextclade_mn908947_versions_url)
+    response = requests.get("https://github.com/nextstrain/nextclade_data/blob/master/data/nextstrain/sars-cov-2/MN908947/tree.json")
 
     payload = json.loads(response.content)['payload']
     repo = payload['repo']
-    path = payload['tree']['items'][-1]['path']
+    path = payload['path']
     repository = f"{repo['ownerLogin']}/{repo['name']}"
     branch = repo['defaultBranch']
+    latest_commit = payload['refInfo']['currentOid']
 
-    current_latest_tree_url = f"https://raw.githubusercontent.com/{repository}/{branch}/{path}/tree.json"
+    current_latest_tree_url = f"https://raw.githubusercontent.com/{repository}/{branch}/{path}"
 
     print(f"Latest URL: {current_latest_tree_url}")
     print()
 
     omicron_pango_values = set()
 
-    if nextclade_latest_url == current_latest_tree_url:
+    if last_retrieved_commit == latest_commit:
         print("No new data is available")
         print(f"Url was already parsed: {last_updated}")
         print()
@@ -311,7 +312,7 @@ if __name__ == "__main__":
 
     else:
 
-        last_updated_file.write(current_latest_tree_url)
+        last_updated_file.write(latest_commit)
 
         print("New data available")
         print("Loading new tree ... ", end="")

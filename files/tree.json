@@ -28815,6 +28815,29 @@
                                                                             "root": "XBB"
                                                                         },
                                                                         "children": []
+                                                                    },
+                                                                    {
+                                                                        "id": "XBB.1.9.2.5.1.1.11",
+                                                                        "lineage": {
+                                                                            "pango": "HK.11",
+                                                                            "partial": "XBB.1.9.2.5.1.1.11",
+                                                                            "unaliased": "XBB.1.9.2.5.1.1.11",
+                                                                            "designation_date": "2023-09-04 12:40:39+0000"
+                                                                        },
+                                                                        "height": 7,
+                                                                        "parent": {
+                                                                            "line_of_descent": [
+                                                                                "XBB.1.9.2.5.1.1",
+                                                                                "XBB.1.9.2.5.1",
+                                                                                "XBB.1.9.2.5",
+                                                                                "XBB.1.9.2",
+                                                                                "XBB.1.9",
+                                                                                "XBB.1",
+                                                                                "XBB"
+                                                                            ],
+                                                                            "root": "XBB"
+                                                                        },
+                                                                        "children": []
                                                                     }
                                                                 ]
                                                             },

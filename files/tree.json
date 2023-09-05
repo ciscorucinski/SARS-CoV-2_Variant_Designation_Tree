@@ -9044,7 +9044,27 @@
                                     ],
                                     "root": "B.1.1.529"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "B.1.1.529.2.86.1",
+                                        "lineage": {
+                                            "pango": "BA.2.86.1",
+                                            "partial": "BA.2.86.1",
+                                            "unaliased": "B.1.1.529.2.86.1",
+                                            "designation_date": "2023-09-05 18:19:03+0000"
+                                        },
+                                        "height": 3,
+                                        "parent": {
+                                            "line_of_descent": [
+                                                "B.1.1.529.2.86",
+                                                "B.1.1.529.2",
+                                                "B.1.1.529"
+                                            ],
+                                            "root": "B.1.1.529"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     },

@@ -29289,6 +29289,28 @@
                                                                     "root": "XBB"
                                                                 },
                                                                 "children": []
+                                                            },
+                                                            {
+                                                                "id": "XBB.1.9.2.5.1.8",
+                                                                "lineage": {
+                                                                    "pango": "EG.5.1.8",
+                                                                    "partial": "XBB.1.9.2.5.1.8",
+                                                                    "unaliased": "XBB.1.9.2.5.1.8",
+                                                                    "designation_date": "2023-09-11 14:06:46+0000"
+                                                                },
+                                                                "height": 6,
+                                                                "parent": {
+                                                                    "line_of_descent": [
+                                                                        "XBB.1.9.2.5.1",
+                                                                        "XBB.1.9.2.5",
+                                                                        "XBB.1.9.2",
+                                                                        "XBB.1.9",
+                                                                        "XBB.1",
+                                                                        "XBB"
+                                                                    ],
+                                                                    "root": "XBB"
+                                                                },
+                                                                "children": []
                                                             }
                                                         ]
                                                     },

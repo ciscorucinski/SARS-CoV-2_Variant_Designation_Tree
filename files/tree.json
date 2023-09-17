@@ -25290,6 +25290,27 @@
                                                             "root": "XBB"
                                                         },
                                                         "children": []
+                                                    },
+                                                    {
+                                                        "id": "XBB.1.5.70.2.3",
+                                                        "lineage": {
+                                                            "pango": "GK.2.3",
+                                                            "partial": "XBB.1.5.70.2.3",
+                                                            "unaliased": "XBB.1.5.70.2.3",
+                                                            "designation_date": "2023-09-17 13:01:19+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.5.70.2",
+                                                                "XBB.1.5.70",
+                                                                "XBB.1.5",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
                                                     }
                                                 ]
                                             },

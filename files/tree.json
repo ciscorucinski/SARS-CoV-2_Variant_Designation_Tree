@@ -28274,6 +28274,48 @@
                                                     "root": "XBB"
                                                 },
                                                 "children": []
+                                            },
+                                            {
+                                                "id": "XBB.1.9.1.31",
+                                                "lineage": {
+                                                    "pango": "FL.31",
+                                                    "partial": "XBB.1.9.1.31",
+                                                    "unaliased": "XBB.1.9.1.31",
+                                                    "designation_date": "2023-09-21 17:24:07+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.1.9.1",
+                                                        "XBB.1.9",
+                                                        "XBB.1",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "id": "XBB.1.9.1.31.1",
+                                                        "lineage": {
+                                                            "pango": "FL.31.1",
+                                                            "partial": "XBB.1.9.1.31.1",
+                                                            "unaliased": "XBB.1.9.1.31.1",
+                                                            "designation_date": "2023-09-21 17:26:26+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.9.1.31",
+                                                                "XBB.1.9.1",
+                                                                "XBB.1.9",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     },
@@ -36247,6 +36289,21 @@
                 "parent": {
                     "line_of_descent": null,
                     "root": "XCM"
+                },
+                "children": []
+            },
+            {
+                "id": "XCN",
+                "lineage": {
+                    "pango": "XCN",
+                    "partial": "XCN",
+                    "unaliased": "XCN",
+                    "designation_date": "2023-09-21 17:19:24+0000"
+                },
+                "height": 0,
+                "parent": {
+                    "line_of_descent": null,
+                    "root": "XCN"
                 },
                 "children": []
             }

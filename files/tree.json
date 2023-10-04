@@ -34727,6 +34727,48 @@
                                                     "root": "XBB"
                                                 },
                                                 "children": []
+                                            },
+                                            {
+                                                "id": "XBB.2.3.3.5",
+                                                "lineage": {
+                                                    "pango": "GJ.5",
+                                                    "partial": "XBB.2.3.3.5",
+                                                    "unaliased": "XBB.2.3.3.5",
+                                                    "designation_date": "2023-10-04 15:37:42+0000"
+                                                },
+                                                "height": 4,
+                                                "parent": {
+                                                    "line_of_descent": [
+                                                        "XBB.2.3.3",
+                                                        "XBB.2.3",
+                                                        "XBB.2",
+                                                        "XBB"
+                                                    ],
+                                                    "root": "XBB"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "id": "XBB.2.3.3.5.1",
+                                                        "lineage": {
+                                                            "pango": "GJ.5.1",
+                                                            "partial": "XBB.2.3.3.5.1",
+                                                            "unaliased": "XBB.2.3.3.5.1",
+                                                            "designation_date": "2023-10-04 15:39:26+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.2.3.3.5",
+                                                                "XBB.2.3.3",
+                                                                "XBB.2.3",
+                                                                "XBB.2",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     },

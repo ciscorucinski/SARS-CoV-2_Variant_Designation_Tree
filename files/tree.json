@@ -40930,6 +40930,21 @@
                         "children": []
                     }
                 ]
+            },
+            {
+                "id": "XDD",
+                "lineage": {
+                    "pango": "XDD",
+                    "partial": "XDD",
+                    "unaliased": "XDD",
+                    "designation_date": "2023-11-17 03:23:19+0000"
+                },
+                "height": 0,
+                "parent": {
+                    "line_of_descent": null,
+                    "root": "XDD"
+                },
+                "children": []
             }
         ]
     }

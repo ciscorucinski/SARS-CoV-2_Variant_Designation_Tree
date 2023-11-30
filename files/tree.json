@@ -37060,7 +37060,29 @@
                                                     ],
                                                     "root": "XBB"
                                                 },
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "id": "XBB.1.22.1.8.1",
+                                                        "lineage": {
+                                                            "pango": "FY.8.1",
+                                                            "partial": "XBB.1.22.1.8.1",
+                                                            "unaliased": "XBB.1.22.1.8.1",
+                                                            "designation_date": "2023-11-30 11:32:21+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.22.1.8",
+                                                                "XBB.1.22.1",
+                                                                "XBB.1.22",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "id": "XBB.1.22.1.9",

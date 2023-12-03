@@ -36376,7 +36376,29 @@
                                                     ],
                                                     "root": "XBB"
                                                 },
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "id": "XBB.1.17.1.10.1",
+                                                        "lineage": {
+                                                            "pango": "GA.10.1",
+                                                            "partial": "XBB.1.17.1.10.1",
+                                                            "unaliased": "XBB.1.17.1.10.1",
+                                                            "designation_date": "2023-12-03 11:35:06+0000"
+                                                        },
+                                                        "height": 5,
+                                                        "parent": {
+                                                            "line_of_descent": [
+                                                                "XBB.1.17.1.10",
+                                                                "XBB.1.17.1",
+                                                                "XBB.1.17",
+                                                                "XBB.1",
+                                                                "XBB"
+                                                            ],
+                                                            "root": "XBB"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     },
